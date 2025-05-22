@@ -12,7 +12,7 @@ type FeedState = {
   totalToday: number;
 };
 
-const initialState: FeedState = {
+export const feedInitialState: FeedState = {
   feed: [],
   status: false,
   total: 0,
@@ -21,7 +21,7 @@ const initialState: FeedState = {
 
 export const feedSlice = createSlice({
   name: 'feedSlice',
-  initialState,
+  initialState: feedInitialState,
   selectors: {
     selectFeed: (state) => state.feed,
     selectFeedStatus: (state) => state.status,

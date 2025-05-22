@@ -20,7 +20,7 @@ type BurgerState = {
   burger: TOrder | null;
 };
 
-const initialState: BurgerState = {
+export const burgerInitialState: BurgerState = {
   bun: undefined,
   ingredients: [],
   status: false,
@@ -29,7 +29,7 @@ const initialState: BurgerState = {
 
 export const burgerSlice = createSlice({
   name: 'burgerSlice',
-  initialState,
+  initialState: burgerInitialState,
   selectors: {
     selectOrder: (state) => ({
       bun: state.bun,

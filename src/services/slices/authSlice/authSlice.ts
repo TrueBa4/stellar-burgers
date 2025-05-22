@@ -52,13 +52,13 @@ type UserState = {
   isAuth: boolean;
 };
 
-const initialState: UserState = {
+export const authInitialState: UserState = {
   isAuth: false
 };
 
 export const authSlice = createSlice({
   name: 'authSlice',
-  initialState,
+  initialState: authInitialState,
   selectors: {
     selectUserStatus: (state) => state.isAuth,
     selectUser: (state) => state.user

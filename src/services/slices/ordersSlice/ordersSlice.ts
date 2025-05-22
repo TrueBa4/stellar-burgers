@@ -15,14 +15,14 @@ type OrdersState = {
   orderData?: TOrder;
 };
 
-const initialState: OrdersState = {
+export const ordersInitialState: OrdersState = {
   status: false,
   orders: []
 };
 
 export const ordersSlice = createSlice({
   name: 'ordersSlice',
-  initialState,
+  initialState: ordersInitialState,
   selectors: {
     selectOrderByNumber: (state) => state.orderData,
     selectOrdersStatus: (state) => state.status,

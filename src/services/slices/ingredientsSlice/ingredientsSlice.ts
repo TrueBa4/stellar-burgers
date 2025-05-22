@@ -13,14 +13,14 @@ type IngredientsState = {
   status: boolean;
 };
 
-const initialState: IngredientsState = {
+export const ingredientsInitialState: IngredientsState = {
   ingredients: [],
   status: false
 };
 
 export const ingredientsSlice = createSlice({
   name: 'ingredientsSlice',
-  initialState,
+  initialState: ingredientsInitialState,
   selectors: {
     selectIngredients: (state) => state.ingredients,
     selectBuns: (state) =>
